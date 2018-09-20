@@ -6,4 +6,4 @@ management.endpoint.httptrace.enabled: true
 management.endpoint.auditevents.enabled: true
 
 # Custom properties
-external.api.url: ${EXT_API_URL#{https://randomuser.me/api}}
+external.api.url: ${EXT_API_URL:https://randomuser.me/api}
