@@ -1,0 +1,9 @@
+management.endpoints.web.exposure.include: "*"
+
+management.endpoint.info.enabled: true
+management.endpoint.health.enabled: true
+management.endpoint.httptrace.enabled: true
+management.endpoint.auditevents.enabled: true
+
+# Custom properties
+external.api.url: ${EXT_API_URL#{https://randomuser.me/api}}
