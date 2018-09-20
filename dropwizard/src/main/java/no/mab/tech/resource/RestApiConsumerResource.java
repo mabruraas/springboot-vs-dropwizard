@@ -13,7 +13,6 @@ import org.slf4j.LoggerFactory;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -37,7 +36,7 @@ public class RestApiConsumerResource {
     @GET
     @Path("/persons")
     public List<Person> getPersons() throws IOException {
-        logger.info("Fetching random person");
+        logger.info("Fetching random person from " + restApiUrl);
 
         HttpResponse response = httpClient.execute(new HttpGet(restApiUrl));
         String json = IOUtils.toString(response.getEntity().getContent());

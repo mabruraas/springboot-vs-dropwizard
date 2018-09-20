@@ -22,7 +22,7 @@ public class RestApiConsumerController {
 
     @RequestMapping(value = "/persons", method = RequestMethod.GET)
     public List<Person> getPersons() {
-        logger.info("Fetching random person");
+        logger.info("Fetching random person from " + restApiUrl);
 
         RestTemplate rt = new RestTemplate();
         User user = rt.getForObject(restApiUrl, User.class);
